@@ -9,9 +9,6 @@ chipo = pd.read_csv(url, delimiter = '\t') # \t: Định dạng dấu phân các
 print(chipo.head(10))
 
 # Tạo biểu đồ của 5 mặt hàng được mua nhiều nhất
-
-import matplotlib.pyplot as plt
-
 # Tạo Series chứa số lượng của mỗi mặt hàng
 top_items = chipo['item_name'].value_counts().head(5)
 
