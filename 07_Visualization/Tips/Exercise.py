@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
+# Load data từ DataFrame
 tips = pd.read_csv('https://raw.githubusercontent.com/thieu1995/csv-files/main/data/pandas/tips.csv')
 
 # Xoas cột Unnamed 0
@@ -17,8 +19,6 @@ plt.ylabel('Tip')
 plt.show()
 
 # Tạo một hình ảnh có mối quan hệ về tổng số hóa đơn, tiền boa và kích thước
-import seaborn as sns
-
 sns.pairplot(tips, vars=['total_bill', 'tip', 'size'])
 plt.show()
 
